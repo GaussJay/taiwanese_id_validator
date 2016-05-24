@@ -43,6 +43,10 @@ describe TaiwaneseIdValidator do
         it "#{twid} should be valid" do
           expect(TestUser.new(twid: twid)).not_to be_valid
         end
+
+        it "#{twid} should be valid" do
+          expect(TestUserAllowsNil.new(twid: twid)).not_to be_valid
+        end
       end
     end
   end
